@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import BarChart from "components/BarCharts";
+import DataTable from "components/DataTable";
+import DonutChart from "components/DonutChart";
+import Footer from "components/footer";
+import NavBar from "components/navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <NavBar/>
+    <div className="container">
+      <h1 className="text-primary py-3">Dashboard de Vendas</h1>    
+
+      <div className="row px-3">
+        <div className="col-sm-6">
+          <h5 className="text-center text-secondary">Taxa de Sucesso (%)</h5>
+          <BarChart />
+        </div>
+        <div className="col-sm-6">
+          <h5 className="text-center text-secondary ">Taxa de Sucesso (%)</h5>
+          <DonutChart />
+        </div>
+      </div>
+
+      <div className="py-3">
+        <h2 className="text-primary">Todas as vendas</h2>
+
+      </div>
+
+      <DataTable/>
+    </div>    
+    <Footer/>
+    </>
   );
 }
 
