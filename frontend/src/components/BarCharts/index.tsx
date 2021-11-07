@@ -66,7 +66,7 @@ const BarChart = () => {
         },
     };
     
-    const mockData = {
+    /*const mockData = {
         labels: {
             categories: ['Anakin', 'Barry Allen', 'Kal-El', 'Logan', 'Padmé']
         },
@@ -77,6 +77,7 @@ const BarChart = () => {
             }
         ]
     };
+    */
     return (
         <Chart 
            options ={{ ...options,xaxis: chartData.labels}}
